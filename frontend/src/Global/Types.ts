@@ -1,0 +1,2 @@
+export const SWITCH_LANGUAGE = 'SWITCH_LANGUAGE'
+export const SWITCH_THEME = 'SWITCH_THEME'

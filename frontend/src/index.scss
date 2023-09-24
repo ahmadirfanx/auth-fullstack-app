@@ -1,0 +1,59 @@
+$primaryColor: rgba(2,0,36,1);
+$primaryColorFaded: rgba(2, 0, 36, 0.1);
+$secondaryColor: rgba(9,9,121,0.9);
+$secondaryColorFaded: rgba(9,9,121,0.1);
+
+
+$gradientColor1: $primaryColor;
+$gradientColor2: rgba(60,183,208,1);
+$gradientColor3: $secondaryColor;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden!important;
+}
+
+code {
+  font-family: Roboto, sans-serif, monospace;
+}
+
+.bg-custom-primary-faded {
+  background: $primaryColorFaded !important;
+}
+
+.bg-custom-secondary-faded {
+  background: $secondaryColorFaded !important;
+}
+
+.bg-custom-primary {
+  background: $primaryColor!important;
+}
+
+.bg-custom-secondary {
+  background: $secondaryColor !important;
+  color: #fff !important;
+}
+
+.text-white {
+  color: #fff;
+}
+
+.text-custom-primary {
+  color: $primaryColor!important;
+}
+
+.text-custom-secondary {
+  color: $secondaryColor !important;
+  border-color: $secondaryColor !important;
+}
+
+
+
+.full-width{
+  width: 100% !important;
+}
