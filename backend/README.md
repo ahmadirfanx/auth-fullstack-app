@@ -22,8 +22,8 @@ To run the Nest.js application, follow these steps:
    - Run `npm install`.
 
 2. **Configure Environment Variables:**
-   - Create a `.env` file based on `.env.example`.
-   - Update it with your configuration.
+   - Open the `config.ts` file located in the `config/` folder.
+   - Update the configuration keys in the `config.ts` file with your desired values.
 
 3. **Build the Application:**
    - Run `npm run build`.
