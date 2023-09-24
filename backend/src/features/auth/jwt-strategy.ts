@@ -1,8 +1,7 @@
 import { Injectable, UnauthorizedException } from "@nestjs/common";
 import { PassportStrategy } from "@nestjs/passport";
 import { Strategy, ExtractJwt } from "passport-jwt";
-import { userInfo } from "os";
-import { environment } from "src/environment/environment";
+import { config } from "src/config/config";
 import { UsersService } from "src/features/users/users.service";
 
 interface JwtPayload {
@@ -17,10 +16,10 @@ export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(private readonly userService: UsersService) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      secretOrKey: environment.JWT_SECRET || 'mysecret27&34!23m9', // Replace with your secret key
+      secretOrKey: config.JWT_SECRET,
       ignoreExpiration: false,
       jsonWebTokenOptions: {
-        maxAge: environment.JWT_EXPIRY || '1h'
+        maxAge: config.JWT_EXPIRY,
       }
     });
   }

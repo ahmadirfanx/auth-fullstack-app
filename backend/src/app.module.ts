@@ -2,12 +2,12 @@ import { Module } from '@nestjs/common';
 import { UsersModule } from './features/users/users.module';
 import { AuthModule } from './features/auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
-import { environment } from './environment/environment';
+import { config } from './config/config';
 
 
 @Module({
   imports: [UsersModule, AuthModule,
-    MongooseModule.forRoot(environment.MONGO_URI)],
+    MongooseModule.forRoot(config.MONGO_URI)],
   controllers: [],
   providers: [],
 })

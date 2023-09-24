@@ -1,21 +1,19 @@
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { ValidationPipe } from '@nestjs/common';
-import * as dotenv from 'dotenv';
+import { config } from './config/config';
 
 async function bootstrap() {
 
-  // Load environment variables from .env file
-  dotenv.config();
-
   const app = await NestFactory.create(AppModule);
 
+  // enables CORS for client
   app.enableCors({
-    origin: 'http://localhost:3001', // Replace with your React app's URL
+    origin: config.CLIENT_URL, // Replace with your React app's URL
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true,
   });
-  
+
   // Global Pipe for validation of incoming Request data and rejecting any unlisted data
   app.useGlobalPipes(
 
