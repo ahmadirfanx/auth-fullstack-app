@@ -1,6 +1,6 @@
 # :rocket: Nest.js Backend Server
 
-Welcome to the JWT Nest.js Backend project! This repository contains the backend code for a Nest.js application using JWT (JSON Web Tokens) for authentication.
+Welcome to the Nest.js Auth Backend App! This repository contains the backend code for a Nest.js application using JWT (JSON Web Tokens) for authentication.
 
 ## :file_folder: Folder Structure
 
