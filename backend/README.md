@@ -1,6 +1,6 @@
-# :rocket: JWT Nest.js Backend
+# :rocket: Nest.js Backend Server
 
-Welcome to the JWT Nest.js Backend project! This repository contains the backend code for a Nest.js application using JWT (JSON Web Tokens) for authentication.
+Welcome to the Nest.js Auth Backend App! This repository contains the backend code for a Nest.js application using JWT (JSON Web Tokens) for authentication.
 
 ## :file_folder: Folder Structure
 
@@ -22,8 +22,8 @@ To run the Nest.js application, follow these steps:
    - Run `npm install`.
 
 2. **Configure Environment Variables:**
-   - Create a `.env` file based on `.env.example`.
-   - Update it with your configuration.
+   - Open the `config.ts` file located in the `config/` folder.
+   - Update the configuration keys in the `config.ts` file with your desired values.
 
 3. **Build the Application:**
    - Run `npm run build`.
