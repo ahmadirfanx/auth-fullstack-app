@@ -42,14 +42,11 @@ export class UsersService {
 
             if (existingUser) throw new ConflictException('Username already exists');
 
-            // Hash the password
-            const hashedPassword = await bcrypt.hash(password, 10);
-
             // Create a new user document in DB
             const newUser = new this.userModel({
                 email,
                 name,
-                password: hashedPassword,
+                password,
             });
 
             // Save the user to the database
