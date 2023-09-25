@@ -30,7 +30,6 @@ export class AuthService {
 
             const validatePassword = await bcrypt.compare(password, user.password);
 
-            console.log('validatedPAssword Obj:', validatePassword)
             if (!validatePassword) throw new UnauthorizedException('Invalid password');
 
             delete user.password;
