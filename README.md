@@ -18,7 +18,9 @@ This is a full-stack authentication app built with NestJS and React.
 2. Install dependencies for both frontend and backend.
 3. Configure the backend (database, environment variables).
 4. Start frontend and backend development servers.
-5. Access the app at `http://localhost:3000` (frontend) and `http://localhost:3001` (backend).
+5. **Run the backend** first at `http://localhost:3000`:
+6. **Run the frontend** it will ask you to run at at `http://localhost:3001`:
+7. Access the app at `http://localhost:3001` (frontend) and `http://localhost:3000` (backend).
 
 ## Contributing 🤝
 
