@@ -1,7 +1,6 @@
 // @ts-nocheck
 import React, { useRef } from 'react';
 import { Button, Card, CardContent, TextField, Typography, Box, FormControl, Divider } from "@mui/material";
-import { Typewriter, useTypewriter, Cursor } from 'react-simple-typewriter'
 import { useStyles } from './Styles';
 import { RootStateOrAny, useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -13,7 +12,6 @@ import AlertM from "../../../Helpers/AlertM/AlertM";
 import { encrypt } from "../../../../Services/CryptoService";
 import { getUserData, storeJWT } from "../../../../Services/LocalStorageService";
 import { login } from "./Actions";
-import GoogleSSO from "../SSO/GoogleSSO/GoogleSSO";
 import { InputAdornment, IconButton } from "@material-ui/core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import * as Icons from "@fortawesome/free-solid-svg-icons";
@@ -71,9 +69,6 @@ function Login() {
     // authentication methods
     const onLogin = (_data: any) => {
         setLoading(true); // show loader
-
-        // encrypt data
-        _data.password = encrypt(_data.password)
 
         post(moduleMain, _data)
             .then(_res => {

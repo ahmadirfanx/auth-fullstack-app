@@ -8,6 +8,8 @@ import { post } from '../../../../Services/GenericApiService';
 import { useForm } from "react-hook-form";
 import '../../../../index.scss';
 import { useTranslation, Trans } from 'react-i18next';
+import { encrypt } from '../../../../Services/CryptoService';
+
 
 function Register() {
     const classes = useStyles();
@@ -48,6 +50,7 @@ function Register() {
 
     const onSubmit = (_data: any) => {
         setLoading(true); // show loader
+
         post(module, _data)
             .then(_res => {
                 console.log(_res)

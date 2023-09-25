@@ -1,6 +1,5 @@
 import React from 'react';
 import { useStyles } from './Styles';
-import { getAll, getById, post, patch, deleteById } from "../../../../Services/GenericApiService";
 import { log } from "../../../../Services/LoggerService";
 import { useEffect } from 'react';
 import { Typography, Box } from "@mui/material";
@@ -18,16 +17,24 @@ function Home() {
 
     return (
         <>
-            <Box sx={{ display: 'flex', minHeight: '99vh', backgroundColor: 'rgba(222, 223, 223, 0.3)' }}>
 
-                <h4 className="mx-2">Dashboard</h4>
-
-                <div className="col-md-12 mb-0 pb-0 mx-3">
-                    <Typography className="my-0 py-0" sx={{ fontSize: 16 }} color="text.secondary" variant="overline">
-                        Welcome to Dashboard
-                    </Typography>
+            <div className="row">
+                <div className="col-md-10 mt-3 py-3 bg-dark mx-auto">
+                    <h4 className="mx-2 text-white">Home</h4>
                 </div>
-            </Box>
+
+                <div className="col-md-6 mt-4 mx-auto">
+                    <div className="justify-content-center text-center">
+                        <h2>Welcome to Home Screen 🫡</h2>
+                        <p className="mb-4">
+                            Let's get you rolling 
+                        </p>
+                        <img className="img-fluid"
+                            src={require('../../../../Assets/img/home-cover.jpg')} width="70%" />
+                    </div>
+                </div>
+
+            </div>
         </>
     );
 }
